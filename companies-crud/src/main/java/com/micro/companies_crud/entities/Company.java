@@ -19,6 +19,7 @@ public class Company {
     private String logo;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "dd/MM/yyyy")
+    @Column(name = "foundation_date")
     private LocalDateTime fundationDate;
 
     @OneToMany(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE})
